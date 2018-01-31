@@ -9,10 +9,10 @@ import org.springframework.session.web.http.DefaultCookieSerializer;
 
 @SpringBootApplication
 @MapperScan("com.example.demo.dao")
-public class SpirngBootDemoApplication {
+public class SpringBootDemoApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(SpirngBootDemoApplication.class, args);
+		SpringApplication.run(SpringBootDemoApplication.class, args);
 	}
 
 	@Bean
