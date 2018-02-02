@@ -1,7 +1,7 @@
-package com.example.demo.dao;
+package com.example.demo.dao.db;
 
 import com.example.demo.common.Page;
-import com.example.demo.model.User;
+import com.example.demo.model.db.User;
 import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.ResultMap;
 import org.apache.ibatis.annotations.Select;

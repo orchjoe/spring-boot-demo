@@ -1,10 +1,10 @@
 package com.example.demo.controller;
 
 import com.example.demo.common.Page;
-import com.example.demo.model.User;
+import com.example.demo.model.db.User;
+import com.example.demo.model.solr.SolrCompany;
 import com.example.demo.service.DemoService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -31,5 +31,15 @@ public class DemoController {
     @RequestMapping("redis")
     public String redis(){
         return demoService.testRedis();
+    }
+
+    @RequestMapping("solr")
+    public List<SolrCompany> solr(){
+        return demoService.getCompanyByName("liubo");
+    }
+
+    @RequestMapping("solrInsert")
+    public void solrInsert(){
+        demoService.saveSolrCompany();
     }
 }
